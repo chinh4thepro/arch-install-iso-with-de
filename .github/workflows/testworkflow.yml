@@ -29,9 +29,9 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd $GITHUB_WORKSPACE
-          pacman-key --init
-          pacman -Syu
-          pacman -S base-devel archiso git wget neofetch
+          pacman-key --init -y
+          pacman -Syu -y
+          pacman -S base-devel archiso git wget neofetch -y
           #lmao why not
           neofetch
           git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
