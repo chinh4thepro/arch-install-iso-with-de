@@ -29,11 +29,13 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd $GITHUB_WORKSPACE
-          sudo pacman-key --init
-          sudo pacman -Sy
-          sudo pacman -S base-devel archiso git wget 
+          acman-key --init
+          pacman -Syu
+          pacman -S base-devel archiso git wget neofetch
+          #lmao why not
+          neofetch
           git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
           ls
           mkdir output
-          sudo ./mkarchiso -v -o output arch-install-iso-with-plasma
+          ./mkarchiso -v -o output arch-install-iso-with-plasma
           
