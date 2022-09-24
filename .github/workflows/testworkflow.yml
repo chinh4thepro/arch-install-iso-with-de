@@ -36,7 +36,7 @@ jobs:
           git clone https://gitlab.archlinux.org/archlinux/archiso.git
           ls
           cd archiso/archiso
-          https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
+          git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
           ls
           mkdir output
           ./mkarchiso -v -o output /arch-install-iso-with-plasma
