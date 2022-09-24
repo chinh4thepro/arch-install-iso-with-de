@@ -32,7 +32,10 @@ jobs:
           echo 'deb-src http://azure.archive.ubuntu.com/ubuntu/ focal main restricted' | sudo tee -a /etc/apt/sources.list
           sudo apt update
           sudo apt build-dep linux
-          sudo apt install libarchive-tools curl wget f2fs-tools cgpt vboot-utils libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf qemu-user-static gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu 
+          sudo apt install libarchive-tools curl wget f2fs-tools cgpt vboot-utils libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf qemu-user-static gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu mtools
+          wget https://gitlab.com/TriVoxel/deb-pacman/uploads/9f716f95c66cd90e65157773d6dea05b/deb-pacman_1.0-0.deb
+          sudo apt install ./deb-pacman_1.0-0.deb
+          sudo pacman -Sy
           git clone https://gitlab.archlinux.org/archlinux/archiso.git
           cd archiso/archiso
           git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
