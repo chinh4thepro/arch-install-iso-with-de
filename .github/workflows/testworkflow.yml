@@ -29,10 +29,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd $GITHUB_WORKSPACE
+          sudo su
           echo 'deb-src http://azure.archive.ubuntu.com/ubuntu/ focal main restricted' | sudo tee -a /etc/apt/sources.list
-          sudo apt update
-          sudo apt build-dep linux
-          sudo apt install libarchive-tools curl wget f2fs-tools cgpt vboot-utils libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf qemu-user-static gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu 
+          apt update
+          apt build-dep linux
+          apt install libarchive-tools curl wget f2fs-tools cgpt vboot-utils libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf qemu-user-static gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu 
           git clone https://gitlab.archlinux.org/archlinux/archiso.git
           ls
           cd archiso/archiso
