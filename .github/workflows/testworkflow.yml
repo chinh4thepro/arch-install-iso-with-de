@@ -34,4 +34,4 @@ jobs:
           sudo apt install docker neofetch
           neofetch
           docker pull nlhomme/archiso-builder
-          docker build --rm -t chinh4thepro/arch-install-iso-with-plasma .
+          docker build --rm -t chinh4thepro/arch-install-iso-with-plasma:latest
