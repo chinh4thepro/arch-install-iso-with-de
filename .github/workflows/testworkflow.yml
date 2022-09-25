@@ -35,7 +35,6 @@ jobs:
           # lmao why not
           neofetch
           git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
-          ls
           mkdir output
           sudo mkarchiso -v -o output arch-install-iso-with-plasma
           
