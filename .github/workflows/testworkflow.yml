@@ -32,6 +32,7 @@ jobs:
           pacman -S base-devel archiso git wget neofetch sudo --noconfirm
           # lmao why not
           neofetch
+          cd /
           git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
           mkdir output
           sudo mkarchiso -v -o output arch-install-iso-with-plasma
