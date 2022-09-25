@@ -121,8 +121,7 @@ plasma
 plasma-nm
 plasma-meta
 xorg-server
-lightdm
-lightdm-gtk-greeter
+sddm
 xdg-user-dirs
 bash-completion
 networkmanager
