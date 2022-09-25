@@ -47,5 +47,6 @@ jobs:
           draft: false
           prerelease: True
           release_name: Test release
+          tag: test release 
         env:
           GITHUB_TOKEN: ${{ github.token }}
