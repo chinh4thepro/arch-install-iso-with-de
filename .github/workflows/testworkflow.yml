@@ -41,3 +41,9 @@ jobs:
         with:
           name: archiso-with-plasma
           path: output/archlinux-*-x86_64.iso
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: output/archlinux-*-x86-64.iso
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
