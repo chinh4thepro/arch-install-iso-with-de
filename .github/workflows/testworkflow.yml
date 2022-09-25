@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+ This is a basic workflow to help you get started with Actions
 
 name: CI
 
@@ -19,7 +19,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    container: archlinux
+    options: --privileged
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -29,7 +30,12 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd $GITHUB_WORKSPACE
-          echo 'deb-src http://azure.archive.ubuntu.com/ubuntu/ focal main restricted' | sudo tee -a /etc/apt/sources.list
-          sudo apt update
-          docker pull nlhomme/archiso-builder
-          docker run --rm -v /tmp:/tmp -t -i --privileged nlhomme/archiso-builder:latest << https://github.com/chinh4thepro/arch-install-iso-with-plasma
+          pacman-key --init
+          pacman -Syu --noconfirm
+          pacman -S base-devel archiso git wget neofetch --noconfirm
+          # lmao why not
+          neofetch
+          git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
+          ls
+          mkdir output
+          mkarchiso -v -o output arch-install-iso-with-plasma
