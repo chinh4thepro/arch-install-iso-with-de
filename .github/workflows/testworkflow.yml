@@ -29,7 +29,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd $GITHUB_WORKSPACE
-          pacman-key --init --no-confirm
+          pacman-key --init
           pacman -Syu --no-confirn
           pacman -S base-devel archiso git wget neofetch --no-confirm
           # lmao why not
