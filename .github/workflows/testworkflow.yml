@@ -20,7 +20,9 @@ jobs:
           pacman-key --init
           pacman -Syu --noconfirm
           pacman -S archiso git --noconfirm
-          mkarchiso -v .
+          git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
+          mkdir out
+          mkarchiso -v -o out arch-install-iso-with-plasma
           find out/
         
       - name: Upload artifacts
