@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Build the image
 
 # Controls when the action will run. 
 on:
@@ -36,3 +36,7 @@ jobs:
           ls
           mkdir output
           mkarchiso -v -o output arch-install-iso-with-plasma
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2.2.2
+        with:
+          path: output/archlinux-*.iso
