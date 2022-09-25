@@ -44,6 +44,8 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: none
+          release_name: Release
           files: output/archlinux-*-x86-64.iso
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
