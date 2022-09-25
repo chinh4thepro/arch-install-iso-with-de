@@ -30,8 +30,8 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           pacman-key --init
-          pacman -Syu --no-confirm
-          pacman -S base-devel archiso git wget neofetch --no-confirm
+          pacman -Syu --noconfirm
+          pacman -S base-devel archiso git wget neofetch --noconfirm
           # lmao why not
           neofetch
           git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
