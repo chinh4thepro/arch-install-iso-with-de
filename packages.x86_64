@@ -1,5 +1,3 @@
-
-
 alsa-utils
 amd-ucode
 arch-install-scripts
@@ -37,7 +35,6 @@ gptfdisk
 grml-zsh-config
 grub
 hdparm
-holostaging/holoiso-install-script-gui
 intel-ucode
 ipw2100-fw
 ipw2200-fw
@@ -50,8 +47,6 @@ less
 lftp
 libfido2
 libusb-compat
-linux-neptune
-linux-holoiso
 linux-atm
 linux-firmware
 linux-firmware-marvell
