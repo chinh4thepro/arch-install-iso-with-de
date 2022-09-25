@@ -33,7 +33,6 @@ jobs:
           sudo apt update
           sudo apt build-dep linux
           sudo apt install libarchive-tools curl wget f2fs-tools cgpt vboot-utils libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf qemu-user-static gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu 
-          sudo apt install neofetch
           curl -sSfL get.docker.com | bash
           neofetch
           docker pull nlhomme/archiso-builder
