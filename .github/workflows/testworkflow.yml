@@ -39,4 +39,4 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2.2.2
         with:
-          path: output/archlinux-*.iso
+          path: output/archlinux-*-x86_64.iso
