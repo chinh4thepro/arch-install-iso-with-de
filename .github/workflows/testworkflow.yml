@@ -30,7 +30,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           pacman-key --init
-          pacman -Syu --no-confirn
+          pacman -Syu --no-confirm
           pacman -S base-devel archiso git wget neofetch --no-confirm
           # lmao why not
           neofetch
