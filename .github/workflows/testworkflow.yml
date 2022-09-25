@@ -40,13 +40,3 @@ jobs:
         uses: actions/upload-artifact@v2.2.2
         with:
           path: output/archlinux-*-x86_64.iso
-      - name: release
-        uses: actions/create-release@v1
-        id: create_release
-        with:
-          draft: false
-          prerelease: True
-          release_name: Test release
-          tag_name: None
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
