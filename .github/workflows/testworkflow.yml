@@ -33,7 +33,8 @@ jobs:
           # lmao why not
           neofetch
           cd /
-          mkdir -p home/chinh4thepro
+          mkdir -p /home/chinh4thepro
+          cd /home/chinh4thepro
           git clone https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
           mkdir output
           sudo mkarchiso -v -o output arch-install-iso-with-plasma
