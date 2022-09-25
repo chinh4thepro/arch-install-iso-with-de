@@ -31,6 +31,5 @@ jobs:
           cd $GITHUB_WORKSPACE
           echo 'deb-src http://azure.archive.ubuntu.com/ubuntu/ focal main restricted' | sudo tee -a /etc/apt/sources.list
           sudo apt update
-          docker build --rm -t nlhomme/archiso-builder:latest .
           docker pull nlhomme/archiso-builder
           docker run --rm -v /tmp:/tmp -t -i --privileged nlhomme/archiso-builder:latest || https://github.com/chinh4thepro/arch-install-iso-with-plasma.git
