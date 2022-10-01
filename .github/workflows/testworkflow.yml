@@ -23,7 +23,7 @@ jobs:
           # lmao why not
           neofetch
           git clone https://github.com/chinh4thepro/arch-install-iso-with-de.git
-          cd arch arch-install-iso-with-de
+          cd arch-install-iso-with-de
           mkdir output
           mkarchiso -v -o output plasma
       - name: Upload artifacts
@@ -48,7 +48,7 @@ jobs:
           # lmao why not
           neofetch
           git clone https://github.com/chinh4thepro/arch-install-iso-with-de.git
-          cd arch arch-install-iso-with-de
+          cd arch-install-iso-with-de
           mkdir output
           mkarchiso -v -o output gnome
       - name: Upload artifacts
