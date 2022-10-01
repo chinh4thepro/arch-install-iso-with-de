@@ -22,6 +22,7 @@ jobs:
           pacman -S base-devel archiso git wget neofetch --noconfirm
           # lmao why not
           neofetch
+          ls
           mkdir output
           mkarchiso -v -o output plasma
       - name: Upload artifacts
@@ -45,6 +46,7 @@ jobs:
           pacman -S base-devel archiso git wget neofetch --noconfirm
           # lmao why not
           neofetch
+          ls
           mkdir output
           mkarchiso -v -o output gnome
       - name: Upload artifacts
