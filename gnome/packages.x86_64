@@ -120,7 +120,7 @@ xfsprogs
 xl2tpd
 zsh
 gnome
-gdm
+sddm
 networkmanager
 network-manager-applet
 firefox
