@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="archlinux-plasma"
+iso_name="archlinux-btw-plasma"
 iso_label="ARCH_$(date +%Y%m)"
-iso_publisher="Arch Linux <https://archlinux.org>"
+iso_publisher="chinh4thepro"
 iso_application="Arch Linux Live/Rescue CD"
 iso_version="$(date +%Y.%m.%d)"
 install_dir="arch"
