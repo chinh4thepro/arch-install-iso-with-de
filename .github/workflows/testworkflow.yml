@@ -24,7 +24,7 @@ jobs:
           neofetch
           ls
           mkdir output
-          mkarchiso -v -o output arch-install-iso-with-plasma
+          mkarchiso -v -o output
       - name: Upload artifacts
         uses: actions/upload-artifact@v2.2.2
         with:
