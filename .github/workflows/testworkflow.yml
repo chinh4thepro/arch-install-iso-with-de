@@ -24,7 +24,7 @@ jobs:
           neofetch
           ls
           mkdir output
-          mkarchiso -v -o output
+          mkarchiso -v -o output ./
       - name: Upload artifacts
         uses: actions/upload-artifact@v2.2.2
         with:
