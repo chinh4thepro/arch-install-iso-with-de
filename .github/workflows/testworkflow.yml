@@ -27,9 +27,9 @@ jobs:
           name: archiso-with-plasma
           path: output/*.iso
       - uses: softprops/action-gh-release@v1
-          with:
-            files: 'output/*.iso'
-            tag_name: 'Release'
-            token: ${{ secrets.GITHUB_TOKEN }}
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: 'output/*.iso'
+          tag_name: 'Release'
+          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
