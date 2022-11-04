@@ -1,8 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Build the image
-
-# Controls when the action will run. 
+name: Build iso
 on:
   schedule:
     - cron: "0 6 * * 0"
@@ -14,8 +10,8 @@ jobs:
       image: archlinux
       options: --privileged
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a multi-line script
+      - uses: actions/checkout@v3
+      - name: Build iso
         run: |
           cd $GITHUB_WORKSPACE
           pacman-key --init
@@ -23,10 +19,17 @@ jobs:
           pacman -S base-devel archiso git wget neofetch --noconfirm
           neofetch
           ls
-          mkdir output
-          mkarchiso -v -o output ./
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v2.2.2
+          mkdir kde/output
+          mkarchiso -v -o kde/output ./
+      - name: Upload and release artifacts
+        uses: actions/upload-artifact@v3
         with:
           name: archiso-with-plasma
-          path: output/*.iso
+          path: kde/output/*.iso
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: 'kde/output/*.iso'
+          tag_name: 'Release'
+          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
