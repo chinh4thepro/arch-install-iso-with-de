@@ -41,17 +41,10 @@ jobs:
           name: archiso-with-plasma
           path: output/*.iso
       
-      - uses: pyTooling/Actions/releaser@r0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: 'Dev'
-          rm: true
-          files: output/*.iso
-        if: github.event_name == 'push'
-      
-      - uses: softprops/action-gh-release@v1
-        with:
-          files: 'output/*.iso'
-          tag: 'Release'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         uses: softprops/action-gh-release@v1
+          with:
+            files: 'output/*.iso'
+            tag_name: 'Release'
+            token: ${{ secrets.GITHUB_TOKEN }}
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
