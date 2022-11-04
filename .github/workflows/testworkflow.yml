@@ -1,20 +1,29 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Build iso
 
-# Controls when the action will run. 
 on:
+  
   schedule:
+    
     - cron: "0 6 * * 0"
+  
   workflow_dispatch:
+
 jobs:
+  
   build:
+    
     runs-on: ubuntu-latest
+    
     container: 
+      
       image: archlinux
+      
       options: --privileged
+    
     steps:
+      
       - uses: actions/checkout@v2
+      
       - name: Build iso
         run: |
           cd $GITHUB_WORKSPACE
@@ -31,6 +40,7 @@ jobs:
         with:
           name: archiso-with-plasma
           path: output/*.iso
+      
       - uses: pyTooling/Actions/releaser@r0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -38,4 +48,9 @@ jobs:
           rm: true
           files: output/*.iso
         if: github.event_name == 'push'
-        
+      
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: 'output/*.iso'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
