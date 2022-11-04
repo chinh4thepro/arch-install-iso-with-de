@@ -19,16 +19,16 @@ jobs:
           pacman -S base-devel archiso git wget neofetch --noconfirm
           neofetch
           ls
-          mkdir output
-          mkarchiso -v -o output ./
+          mkdir kde/output
+          mkarchiso -v -o kde/output ./
       - name: Upload and release artifacts
         uses: actions/upload-artifact@v3
         with:
           name: archiso-with-plasma
-          path: output/*.iso
+          path: kde/output/*.iso
       - uses: softprops/action-gh-release@v1
         with:
-          files: 'output/*.iso'
+          files: 'kde/output/*.iso'
           tag_name: 'Release'
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
