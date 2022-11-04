@@ -26,8 +26,7 @@ jobs:
         with:
           name: archiso-with-plasma
           path: output/*.iso
-      
-         uses: softprops/action-gh-release@v1
+      - uses: softprops/action-gh-release@v1
           with:
             files: 'output/*.iso'
             tag_name: 'Release'
