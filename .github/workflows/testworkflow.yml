@@ -28,7 +28,7 @@ jobs:
           path: kde/output/*.iso
       - uses: softprops/action-gh-release@v1
         with:
-          files: 'kde/output/*.iso'
+          files: 'kde/output/*'
           tag_name: 'Release'
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
