@@ -3,7 +3,7 @@
 
 iso_name="archlinux-btw-plasma"
 iso_label="ARCH_$(date +%Y%m)"
-iso_publisher="chinh4thepro"
+iso_publisher="chinh4thepro<https://github.com/chinh4thepro>"
 iso_application="Arch Linux Live/Rescue CD"
 iso_version="$(date +%Y.%m.%d)"
 install_dir="arch"
