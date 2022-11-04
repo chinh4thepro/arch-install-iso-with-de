@@ -20,7 +20,7 @@ jobs:
           neofetch
           ls
           mkdir kde/output
-          mkarchiso -v -o kde/output ./
+          mkarchiso -v -o kde/output kde
       - name: Upload and release artifacts
         uses: actions/upload-artifact@v3
         with:
