@@ -1,1 +1,2 @@
-#Weekly Release 1
+# Weekly Release 1
+## Currently only supports KDE
