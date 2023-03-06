@@ -38,8 +38,6 @@ hdparm
 hyperv
 intel-ucode
 irssi
-iw
-iwd
 jfsutils
 kitty-terminfo
 less
@@ -66,6 +64,8 @@ mtools
 nano
 nbd
 ndisc6
+neofetch
+neovim
 nfs-utils
 nilfs-utils
 nmap
