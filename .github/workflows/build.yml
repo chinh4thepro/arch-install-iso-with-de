@@ -18,6 +18,8 @@ jobs:
           pacman-key --init
           pacman -Syu --noconfirm
           pacman -S base-devel archiso git wget neofetch --noconfirm
+          pacman -S reflector rsync curl
+          reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
           neofetch
           ls
           mkdir output
